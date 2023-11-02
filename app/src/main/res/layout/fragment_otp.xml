@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.sdtv.trident.ui.otp.OtpViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.otp.Otp"
+        android:background="@color/background">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/left_Vertical_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.1" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/right_Vertical_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.9" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/upper_Horizontal_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.051983584" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/lower_Horizontal_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.95" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/OtpVerification_textView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/enter_otp"
+            android:textColor="@color/Carmine"
+            android:textSize="@dimen/otp_textSize"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/lower_Otp_Verification_guideline"
+            app:layout_constraintEnd_toStartOf="@+id/right_Vertical_guideline"
+            app:layout_constraintHorizontal_bias="0.065"
+            app:layout_constraintStart_toStartOf="@+id/left_Vertical_guideline"
+            app:layout_constraintTop_toTopOf="@+id/upper_Otp_Verification_guideline" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/sent_Verification_textView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/otpsenttomobilenumber"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/sentVerfication_textSize"
+            app:layout_constraintBottom_toTopOf="@+id/lower_Verficatoin_Textview_guideline"
+
+            app:layout_constraintEnd_toStartOf="@+id/right_Vertical_guideline"
+            app:layout_constraintHorizontal_bias="0.48"
+            app:layout_constraintStart_toStartOf="@+id/left_Vertical_guideline"
+            app:layout_constraintTop_toTopOf="@+id/upper_Verification_Textview_guideline" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/first_Otp_Digit"
+            android:layout_width="@dimen/common_height_and_width"
+            android:layout_height="@dimen/common_height_and_width"
+            android:background="@drawable/backgroundsquarebox"
+            android:contentDescription="@string/first_Otp1"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="1"
+            android:text="@={viewModel.firstOtpDigitFlow}"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/lower_Otp_Digit_guideline"
+            app:layout_constraintEnd_toStartOf="@+id/right_First_Edittext_guideline"
+            app:layout_constraintStart_toStartOf="@+id/left_Vertical_guideline"
+            app:layout_constraintTop_toTopOf="@+id/upper_Otp_Digit_guideline" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/second_Otp_Digit"
+            android:layout_width="@dimen/common_height_and_width"
+            android:layout_height="@dimen/common_height_and_width"
+            android:background="@drawable/backgroundsquarebox"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="1"
+            android:text="@={viewModel.secondOtpDigitFlow}"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/lower_Otp_Digit_guideline"
+            app:layout_constraintEnd_toStartOf="@+id/right_Second_Edittext_guideline"
+            app:layout_constraintStart_toStartOf="@+id/left_Second_Edittext_guideline"
+            app:layout_constraintTop_toTopOf="@+id/upper_Otp_Digit_guideline" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/third_Otp_Digit"
+            android:layout_width="@dimen/common_height_and_width"
+            android:layout_height="@dimen/common_height_and_width"
+            android:background="@drawable/backgroundsquarebox"
+            android:contentDescription="@string/third_otp1"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="1"
+            android:text="@={viewModel.thirdOtpDigitFlow}"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/lower_Otp_Digit_guideline"
+            app:layout_constraintEnd_toStartOf="@+id/right_Third_Edittext_guideline"
+            app:layout_constraintStart_toStartOf="@+id/lef_Third_Edittext_guideline"
+            app:layout_constraintTop_toTopOf="@+id/upper_Otp_Digit_guideline" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/forth_Otp_Digit"
+            android:layout_width="@dimen/common_height_and_width"
+            android:layout_height="@dimen/common_height_and_width"
+            android:background="@drawable/backgroundsquarebox"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="1"
+            android:text="@={viewModel.forthtOtpDigitFlow}"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/lower_Otp_Digit_guideline"
+            app:layout_constraintEnd_toStartOf="@+id/right_Forth_Edittext_guideline"
+            app:layout_constraintStart_toStartOf="@+id/left_Forth_Edittext_guideline"
+            app:layout_constraintTop_toTopOf="@+id/upper_Otp_Digit_guideline" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fift_Otp_Digit"
+            android:layout_width="@dimen/common_height_and_width"
+            android:layout_height="@dimen/common_height_and_width"
+            android:background="@drawable/backgroundsquarebox"
+            android:contentDescription="@string/fifth_Otp1"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="1"
+            android:text="@={viewModel.fifthOtpDigitFlow}"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/lower_Otp_Digit_guideline"
+            app:layout_constraintEnd_toStartOf="@+id/right_Fifth_Edittext_guideline"
+            app:layout_constraintStart_toStartOf="@+id/left_Fifth_Edittext_guideline"
+            app:layout_constraintTop_toTopOf="@+id/upper_Otp_Digit_guideline" />
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/sixth_Otp_Digit"
+            android:layout_width="@dimen/common_height_and_width"
+            android:layout_height="@dimen/common_height_and_width"
+            android:background="@drawable/backgroundsquarebox"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="1"
+            android:text="@={viewModel.sixthOtpDigitFlow}"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/lower_Otp_Digit_guideline"
+            app:layout_constraintEnd_toStartOf="@+id/right_Vertical_guideline"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/left_sixth_Edittext_guideline"
+            app:layout_constraintTop_toTopOf="@+id/upper_Otp_Digit_guideline" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/timer_textview"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/timerforotp"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/timerOtp"
+            app:layout_constraintBottom_toTopOf="@+id/lower_Timer_guideline"
+            app:layout_constraintEnd_toStartOf="@+id/right_Vertical_guideline"
+            app:layout_constraintHorizontal_bias="0.476"
+            app:layout_constraintStart_toStartOf="@+id/left_Vertical_guideline"
+            app:layout_constraintTop_toTopOf="@+id/upper_Timer_guideline" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/resend_Otp_TextView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/didntreceiveotp"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/resendOtp_textview"
+            app:layout_constraintBottom_toTopOf="@+id/lower_resendOtp_guideline"
+            app:layout_constraintEnd_toStartOf="@+id/right_Vertical_guideline"
+            app:layout_constraintHorizontal_bias="0.373"
+            app:layout_constraintStart_toStartOf="@+id/left_Vertical_guideline"
+            app:layout_constraintTop_toTopOf="@+id/upper_resendOtp_guideline" />
+
+        <Button
+            android:id="@+id/email_button"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/common_height_and_width"
+            android:background="@drawable/backgroundsquarebox"
+            android:text="@string/email"
+            android:textSize="@dimen/sms_verify_Button_textview"
+            app:layout_constraintBottom_toTopOf="@+id/lower_Verify_Buttons_guideline"
+            app:layout_constraintEnd_toStartOf="@+id/right_Email_Button_guideline"
+            app:layout_constraintStart_toStartOf="@+id/left_Email_Button_guideline"
+            app:layout_constraintTop_toTopOf="@+id/upper_Verify_Buttons_guideline" />
+
+        <Button
+            android:id="@+id/sms_button"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/common_height_and_width"
+            android:background="@drawable/backgroundsquarebox"
+            android:text="@string/sms"
+            android:textSize="@dimen/sms_verify_Button_textview"
+            app:layout_constraintBottom_toTopOf="@+id/lower_Verify_Buttons_guideline"
+            app:layout_constraintEnd_toStartOf="@+id/right_Sms_Button_guideline"
+            app:layout_constraintStart_toStartOf="@+id/left_Sms_Button_guideline"
+            app:layout_constraintTop_toTopOf="@+id/upper_Verify_Buttons_guideline" />
+
+        <Button
+            android:id="@+id/verify_button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/backgroundforverifybutton"
+            android:text="@string/verifyandproceed"
+            android:textAllCaps="false"
+            android:textSize="@dimen/verify_Button_textview"
+            app:layout_constraintBottom_toTopOf="@+id/lower_Verify_Button_guideline"
+            app:layout_constraintEnd_toStartOf="@+id/right_Vertical_guideline"
+            app:layout_constraintHorizontal_bias="0.506"
+            app:layout_constraintStart_toStartOf="@+id/left_Vertical_guideline"
+            app:layout_constraintTop_toTopOf="@+id/upper_Verify_Button_guideline" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/back_button"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/upper_Horizontal_guideline"
+            app:layout_constraintEnd_toStartOf="@+id/left_Vertical_guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/lower_Otp_Verification_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.16826266" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/upper_Otp_Verification_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.11" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/upper_Otp_Digit_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.28" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/lower_Otp_Digit_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.34" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/upper_Verify_Buttons_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.53" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/lower_Verify_Buttons_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.58" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/upper_Verification_Textview_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.19288646" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/lower_Verficatoin_Textview_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.25444597" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/upper_Timer_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.37" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/lower_Timer_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.4131327" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/upper_resendOtp_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.44459644" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/lower_resendOtp_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.49" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/upper_Verify_Button_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.7838577" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/lower_Verify_Button_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.84678525" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/right_First_Edittext_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.20833" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/right_Sms_Button_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.42092457" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/left_Email_Button_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.58" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/right_Email_Button_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.80" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/left_Second_Edittext_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.23833" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/right_Second_Edittext_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.34666" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/lef_Third_Edittext_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.37666" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/right_Third_Edittext_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.4850" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/left_Forth_Edittext_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5150" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/right_Forth_Edittext_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.62333" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/left_Fifth_Edittext_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.65333" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/right_Fifth_Edittext_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.7616" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/left_sixth_Edittext_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.7916" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/left_Sms_Button_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.20" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

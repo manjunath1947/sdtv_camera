@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="width">290dp</dimen>
+    <dimen name="height">45dp</dimen>
+    <dimen name="textsize">20sp</dimen>
+    <dimen name="termssize">15sp</dimen>
+    <dimen name="paddingleft">15dp</dimen>
+    <dimen name="paddingright">10dp</dimen>
+    <dimen name="ems">10</dimen>
+    <dimen name="eye_icon_padding_left">25dp</dimen>
+    <dimen name="eye_icon_height">48dp</dimen>
+    <dimen name="eye_icon_width">69dp</dimen>
+    <dimen name="minheight">48dp</dimen>
+    <dimen name="otp_textSize">30sp</dimen>
+    <dimen name="sentVerfication_textSize">16sp</dimen>
+    <dimen name="common_height_and_width">48dp</dimen>
+    <dimen name="timerOtp">16sp</dimen>
+    <dimen name="resendOtp_textview">16sp</dimen>
+    <dimen name="sms_verify_Button_itextview">14sp</dimen>
+    <dimen name="verify_Button_textview">16sp</dimen>
+    <dimen name="sms_verify_Button_textview">14sp</dimen>
+    <dimen name="login">30dp</dimen>
+    <dimen name="edittext_paddingleft">20dp</dimen>
+    <dimen name="accept_terms_textsize">16sp</dimen>
+</resources>

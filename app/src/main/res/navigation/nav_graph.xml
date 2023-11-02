@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/login">
+
+    <fragment
+        android:id="@+id/otp"
+        android:name="com.sdtv.trident.ui.otp.Otp"
+        android:label="fragment_otp"
+        tools:layout="@layout/fragment_otp" >
+        <action
+            android:id="@+id/action_otp_to_welcome"
+            app:destination="@id/welcome" />
+        <action
+            android:id="@+id/action_otp_to_login"
+            app:destination="@id/login" />
+        <action
+            android:id="@+id/action_otp_to_signupFragment1"
+            app:destination="@id/signupFragment1" />
+    </fragment>
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="com.sdtv.trident.ui.signup.SignupFragment"
+        android:label="SignupFragment" >
+        <action
+            android:id="@+id/action_signupFragment_to_otp"
+            app:destination="@id/otp" />
+        <action
+            android:id="@+id/action_signupFragment_to_login"
+            app:destination="@id/login" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcome"
+        android:name="com.sdtv.trident.ui.welcome.Welcome"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcome_to_signupFragment"
+            app:destination="@id/signupFragment" />
+        <action
+            android:id="@+id/action_welcome_to_login"
+            app:destination="@id/login" />
+    </fragment>
+    <fragment
+        android:id="@+id/login"
+        android:name="com.sdtv.trident.ui.login.Login"
+        android:label="Login" >
+        <action
+            android:id="@+id/action_login_to_welcome"
+            app:destination="@id/welcome" />
+        <action
+            android:id="@+id/action_login_to_signupFragment"
+            app:destination="@id/signupFragment" />
+        <action
+            android:id="@+id/action_login_to_signupFragment1"
+            app:destination="@id/signupFragment1" />
+    </fragment>
+    <fragment
+        android:id="@+id/signupFragment1"
+        android:name="com.sdtv.trident.ui.signup.SignupFragment1"
+        android:label="SignupFragment1" >
+        <action
+            android:id="@+id/action_signupFragment1_to_otp"
+            app:destination="@id/otp" />
+        <action
+            android:id="@+id/action_signupFragment1_to_login"
+            app:destination="@id/login" />
+    </fragment>
+</navigation>

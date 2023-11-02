@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">SDTV</string>
+    <string name="enter_otp">OTP Verification</string>
+    <string name="otpsenttomobilenumber">We have sent verification code to your number. +91-XXXXX XXX01</string>
+    <string name="timerforotp">Timer for OTP.</string>
+    <string name="didntreceiveotp">Didnt Receive OTP? Retry via</string>
+    <string name="sms">SMS</string>
+    <string name="email">Email</string>
+    <string name="verifyandproceed"> Verify and Proceed </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="first_Otp1">First Otp Digit</string>
+    <string name="fifth_Otp1">Fifth Otp 1</string>
+    <string name="third_otp1">Third Otp Digit</string>
+
+    <string name="create_account">Create Account</string>
+    <string name="username">Username</string>
+
+    <string name="password">Password</string>
+    <string name="Confirm_Password">Confirm Password</string>
+    <string name="address">Address</string>
+    <string name="street1">Street Line 1</string>
+    <string name="street2">Street Line 2</string>
+    <string name="city">City</string>
+    <string name="state">State</string>
+    <string name="zipcode">Zip Code</string>
+    <string name="country">Country</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="terms_and_conditions">Accept Terms and Conditions</string>
+    <string name="next">Next</string>
+    <string name="back_button">back button</string>
+    <string name="pwd">pwd</string>
+    <string name="cnf_pwd">cnfpwd</string>
+    <string name="door_number">Door Number</string>
+    <string name="login">Login</string>
+    <string name="forget_password">Forgot Password?</string>
+    <string name="emailid">Emailid</string>
+    <string name="title_activity_exo_player">ExoPlayer</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+</resources>

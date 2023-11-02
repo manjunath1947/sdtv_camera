@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.sdtv.trident.ui.signup.SignupFragment1ViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        tools:context=".ui.signup.signupFragment1">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/left_vr_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.15" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/right_vr_guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.85" />
+
+        <TextView
+            android:id="@+id/create_account_id1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autoSizeTextType="uniform"
+            android:text="@string/create_account"
+            android:textAlignment="center"
+            android:textColor="@color/Carmine"
+            android:textStyle="normal|bold"
+            app:layout_constraintBottom_toTopOf="@+id/create_account_bottom_hr_guideline"
+            app:layout_constraintEnd_toStartOf="@+id/right_vr_guideline2"
+            app:layout_constraintStart_toStartOf="@+id/left_vr_guideline"
+            app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/create_account_bottom_hr_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.14" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/username_top_hr_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.16" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/username_bottom_hr_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.25" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/username_layout_id"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:hint="@string/username"
+            app:endIconMode="clear_text"
+            app:errorEnabled="true"
+            app:errorIconDrawable="@drawable/ic_error"
+            app:layout_constraintBottom_toTopOf="@+id/username_bottom_hr_guideline"
+            app:layout_constraintEnd_toStartOf="@+id/right_vr_guideline2"
+            app:layout_constraintStart_toStartOf="@+id/left_vr_guideline"
+            app:layout_constraintTop_toTopOf="@+id/username_top_hr_guideline"
+            app:startIconDrawable="@drawable/ic_person">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/userNameId1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:autoSizeTextType="none"
+                android:background="@drawable/edittextcolor"
+                android:paddingStart="@dimen/edittext_paddingleft"
+                android:paddingEnd="@dimen/edittext_paddingleft"
+                android:text="@={viewmodel.usernameFlow}"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/text_color" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/email_top_hr_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.27" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/email_bottom_hr_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.36" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/email_layout_id"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:hint="@string/email"
+            app:endIconMode="clear_text"
+            app:layout_constraintBottom_toTopOf="@+id/email_bottom_hr_guideline"
+            app:layout_constraintEnd_toStartOf="@+id/right_vr_guideline2"
+            app:layout_constraintStart_toStartOf="@+id/left_vr_guideline"
+            app:layout_constraintTop_toTopOf="@+id/email_top_hr_guideline"
+            app:startIconDrawable="@drawable/ic_email">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailAddressId1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:autoSizeTextType="none"
+                android:background="@drawable/edittextcolor"
+                android:paddingStart="@dimen/edittext_paddingleft"
+                android:paddingEnd="@dimen/edittext_paddingleft"
+                android:text="@={viewmodel.emailFlow}" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/pwd_top_hr_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.38" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/pwd_bottom_hr_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.47" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password_layout_id"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:hint="@string/password"
+            app:layout_constraintBottom_toTopOf="@+id/pwd_bottom_hr_guideline"
+            app:layout_constraintEnd_toStartOf="@+id/right_vr_guideline2"
+            app:layout_constraintStart_toStartOf="@+id/left_vr_guideline"
+            app:layout_constraintTop_toTopOf="@+id/pwd_top_hr_guideline"
+            app:passwordToggleEnabled="true"
+            app:startIconDrawable="@drawable/ic_password">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passwordId1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/edittextcolor"
+                android:inputType="textPassword"
+                android:paddingStart="@dimen/edittext_paddingleft"
+                android:text="@={viewmodel.passwordFlow}"
+                tools:ignore="RtlSymmetry" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.49" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.58" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/confirm_password_layout_id"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:hint="@string/Confirm_Password"
+            app:layout_constraintBottom_toTopOf="@+id/guideline12"
+            app:layout_constraintEnd_toStartOf="@+id/right_vr_guideline2"
+            app:layout_constraintStart_toStartOf="@+id/left_vr_guideline"
+            app:layout_constraintTop_toTopOf="@+id/guideline11"
+            app:passwordToggleEnabled="true"
+            app:startIconDrawable="@drawable/ic_password">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/confirmPasswordId1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/edittextcolor"
+                android:inputType="textPassword"
+                android:paddingStart="@dimen/edittext_paddingleft"
+                android:text="@={viewmodel.confirmpasswordFlow}"
+                tools:ignore="RtlSymmetry" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.60" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.69" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/mobile_number_layout_id"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:hint="@string/mobile_number"
+            app:endIconMode="clear_text"
+            app:layout_constraintBottom_toTopOf="@+id/guideline14"
+            app:layout_constraintEnd_toStartOf="@+id/right_vr_guideline2"
+            app:layout_constraintStart_toStartOf="@+id/left_vr_guideline"
+            app:layout_constraintTop_toTopOf="@+id/guideline13"
+            app:startIconDrawable="@drawable/ic_phone">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/mobileNumberId1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/edittextcolor"
+                android:inputType="number"
+                android:paddingStart="@dimen/edittext_paddingleft"
+                android:text="@={viewmodel.mobilenumberFlow}"
+                tools:ignore="RtlSymmetry" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.82" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.90" />
+
+        <Button
+            android:id="@+id/next_button_id"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
+            android:background="@drawable/afterclickverifybutton"
+            android:text="@string/next"
+            app:layout_constraintBottom_toTopOf="@+id/guideline16"
+            app:layout_constraintEnd_toStartOf="@+id/right_vr_guideline2"
+            app:layout_constraintStart_toStartOf="@+id/left_vr_guideline"
+            app:layout_constraintTop_toTopOf="@+id/guideline15" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.71" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.8" />
+
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autoSizeTextType="none"
+            android:text="@string/terms_and_conditions"
+            android:textSize="@dimen/accept_terms_textsize"
+            app:layout_constraintBottom_toTopOf="@+id/guideline18"
+            app:layout_constraintEnd_toStartOf="@+id/right_vr_guideline2"
+            app:layout_constraintStart_toStartOf="@+id/left_vr_guideline"
+            app:layout_constraintTop_toTopOf="@+id/guideline17" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.92" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.71" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="Already have an account?  "
+            android:textAlignment="textEnd"
+            android:textColor="@color/text_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline20"
+            app:layout_constraintStart_toStartOf="@+id/left_vr_guideline"
+            app:layout_constraintTop_toTopOf="@+id/guideline19" />
+
+        <TextView
+            android:id="@+id/logintextid"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="Login"
+            android:textColor="@color/red"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/right_vr_guideline2"
+            app:layout_constraintStart_toStartOf="@+id/guideline20"
+            app:layout_constraintTop_toTopOf="@+id/guideline19" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

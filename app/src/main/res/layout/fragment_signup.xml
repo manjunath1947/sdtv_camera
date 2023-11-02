@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.MainActivity"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="22dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/leftVerticalGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.15" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/rightVerticalGuidelineId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.85" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/create_account_top_hr_gl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/createAccountId"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autoSizeTextType="uniform"
+            android:text="@string/create_account"
+            android:textAlignment="center"
+            android:textColor="@color/grey"
+            android:textStyle="normal|bold"
+            app:layout_constraintBottom_toTopOf="@+id/create_account_bottom_hr_gl"
+            app:layout_constraintEnd_toStartOf="@+id/rightVerticalGuidelineId"
+            app:layout_constraintStart_toStartOf="@+id/leftVerticalGuideline"
+            app:layout_constraintTop_toTopOf="@+id/create_account_top_hr_gl" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/userNameId"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autoSizeTextType="uniform"
+            android:background="@drawable/background_username"
+            android:hint="@string/username"
+            android:inputType="textPersonName"
+            android:paddingLeft="@dimen/paddingleft"
+            app:layout_constraintBottom_toTopOf="@+id/username_bottom_hr_gl"
+            app:layout_constraintEnd_toStartOf="@+id/rightVerticalGuidelineId"
+
+            app:layout_constraintStart_toStartOf="@+id/leftVerticalGuideline"
+            app:layout_constraintTop_toTopOf="@+id/username_top_hr_gl" />
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailAddressId"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autoSizeTextType="uniform"
+            android:background="@drawable/background_username"
+            android:hint="@string/email"
+            android:inputType="textPersonName"
+            android:paddingLeft="@dimen/paddingleft"
+            app:layout_constraintBottom_toTopOf="@+id/email_bottom_hr_gl"
+            app:layout_constraintEnd_toStartOf="@+id/rightVerticalGuidelineId"
+            app:layout_constraintStart_toStartOf="@+id/leftVerticalGuideline"
+            app:layout_constraintTop_toTopOf="@+id/email_top_hr_gl" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordId"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autoSizeTextType="uniform"
+            android:background="@drawable/background_username"
+            android:drawableRight="@drawable/baseline_visibility_off_24"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:paddingLeft="@dimen/paddingleft"
+            android:paddingRight="@dimen/paddingright"
+            app:layout_constraintBottom_toTopOf="@+id/password_bottom_hr_gl"
+            app:layout_constraintEnd_toStartOf="@+id/rightVerticalGuidelineId"
+            app:layout_constraintStart_toStartOf="@+id/leftVerticalGuideline"
+            app:layout_constraintTop_toTopOf="@+id/password_top_hr_gl" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/confirmPasswordId"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autoSizeTextType="uniform"
+            android:background="@drawable/background_username"
+            android:drawableRight="@drawable/baseline_visibility_off_24"
+            android:hint="@string/Confirm_Password"
+            android:inputType="textPassword"
+            android:paddingLeft="@dimen/paddingleft"
+            android:paddingRight="@dimen/paddingright"
+            app:layout_constraintBottom_toTopOf="@+id/confirm_pwd_bottom_hr_gl"
+            app:layout_constraintEnd_toStartOf="@+id/rightVerticalGuidelineId"
+            app:layout_constraintStart_toStartOf="@+id/leftVerticalGuideline"
+            app:layout_constraintTop_toTopOf="@+id/confirm_pwd_top_hr_gl" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/addressId"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autoSizeTextType="uniform"
+            android:paddingLeft="@dimen/paddingleft"
+            android:text="@string/address"
+            android:textColor="@color/grey"
+            android:textStyle="normal|bold"
+            app:layout_constraintBottom_toTopOf="@+id/address_bottom_hr_gl"
+            app:layout_constraintEnd_toStartOf="@+id/rightVerticalGuidelineId"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/leftVerticalGuideline"
+            app:layout_constraintTop_toTopOf="@+id/address_top_hr_gl"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/streetLine1Id"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autoSizeTextType="uniform"
+            android:background="@drawable/background_username"
+            android:hint="@string/door_number"
+            android:inputType="textPersonName"
+            android:paddingStart="@dimen/paddingleft"
+            app:layout_constraintBottom_toTopOf="@+id/street1_bottom_he_gl"
+            app:layout_constraintEnd_toStartOf="@+id/rightVerticalGuidelineId"
+            app:layout_constraintStart_toStartOf="@+id/leftVerticalGuideline"
+            app:layout_constraintTop_toTopOf="@+id/street1_top_hr_gl" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/streetLine2Id"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autoSizeTextType="uniform"
+            android:background="@drawable/background_username"
+            android:hint="@string/street2"
+            android:inputType="textPersonName"
+            android:minHeight="@dimen/minheight"
+            android:paddingLeft="@dimen/paddingleft"
+            app:layout_constraintBottom_toTopOf="@+id/street2_bottom_hr_gl"
+            app:layout_constraintEnd_toStartOf="@+id/rightVerticalGuidelineId"
+            app:layout_constraintStart_toStartOf="@+id/leftVerticalGuideline"
+            app:layout_constraintTop_toTopOf="@+id/street2_top_hr_gl" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/cityId"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:autoSizeTextType="uniform"
+            android:background="@drawable/background_username"
+            android:hint="@string/city"
+            android:inputType="textPersonName"
+            android:minHeight="@dimen/minheight"
+            android:paddingLeft="@dimen/paddingleft"
+            app:layout_constraintBottom_toTopOf="@+id/city_bottom_hr_gl"
+            app:layout_constraintEnd_toStartOf="@+id/city_right_vertical_gl"
+            app:layout_constraintStart_toStartOf="@+id/leftVerticalGuideline"
+            app:layout_constraintTop_toTopOf="@+id/city_top_hr_gl" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/stateId"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autoSizeTextType="uniform"
+            android:background="@drawable/background_username"
+            android:hint="@string/state"
+            android:inputType="textPersonName"
+            android:minHeight="@dimen/eye_icon_height"
+            android:paddingLeft="@dimen/paddingleft"
+            app:layout_constraintBottom_toTopOf="@+id/city_bottom_hr_gl"
+            app:layout_constraintEnd_toStartOf="@+id/rightVerticalGuidelineId"
+            app:layout_constraintStart_toStartOf="@+id/state_left_vertical_gl"
+            app:layout_constraintTop_toTopOf="@+id/city_top_hr_gl" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/zipCodeId"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autoSizeTextType="uniform"
+            android:background="@drawable/background_username"
+            android:hint="@string/zipcode"
+            android:inputType="number"
+            android:paddingLeft="@dimen/paddingleft"
+            app:layout_constraintBottom_toTopOf="@+id/zipcode_bottom_hr_gl"
+            app:layout_constraintEnd_toStartOf="@+id/city_right_vertical_gl"
+            app:layout_constraintStart_toStartOf="@+id/leftVerticalGuideline"
+            app:layout_constraintTop_toTopOf="@+id/zipcode_top_hr_gl" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/countryId"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autoSizeTextType="uniform"
+            android:background="@drawable/background_username"
+            android:hint="@string/country"
+            android:inputType="textPersonName"
+            android:paddingLeft="@dimen/paddingleft"
+            app:layout_constraintBottom_toTopOf="@+id/zipcode_bottom_hr_gl"
+            app:layout_constraintEnd_toStartOf="@+id/rightVerticalGuidelineId"
+            app:layout_constraintStart_toStartOf="@+id/state_left_vertical_gl"
+            app:layout_constraintTop_toTopOf="@+id/zipcode_top_hr_gl" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/mobileNumberId"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autoSizeTextType="uniform"
+            android:background="@drawable/background_username"
+            android:hint="@string/mobile_number"
+            android:inputType="number"
+            android:paddingLeft="@dimen/paddingleft"
+            app:layout_constraintBottom_toTopOf="@+id/mobile_number_bottom_hr_gl"
+            app:layout_constraintEnd_toStartOf="@+id/rightVerticalGuidelineId"
+            app:layout_constraintStart_toStartOf="@+id/leftVerticalGuideline"
+            app:layout_constraintTop_toTopOf="@+id/mobile_number_top_hr_gl" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/termsAndConditionsId"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autoSizeTextType="uniform"
+            android:text="@string/terms_and_conditions"
+            app:layout_constraintBottom_toTopOf="@+id/terms_conditions_bottom_hr_gl"
+            app:layout_constraintEnd_toStartOf="@+id/rightVerticalGuidelineId"
+            app:layout_constraintStart_toStartOf="@+id/leftVerticalGuideline"
+            app:layout_constraintTop_toTopOf="@+id/terms_conditions_top_hr_gl" />
+
+        <Button
+            android:id="@+id/registerButtonId"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/backgroundforverifybutton"
+
+            android:text="@string/next"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize"
+            app:layout_constraintBottom_toTopOf="@+id/register_bottom_hr_gl"
+            app:layout_constraintEnd_toStartOf="@+id/rightVerticalGuidelineId"
+            app:layout_constraintStart_toStartOf="@+id/leftVerticalGuideline"
+            app:layout_constraintTop_toTopOf="@+id/register_top_hr_gl" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/create_account_bottom_hr_gl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.08" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/username_top_hr_gl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.11" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/username_bottom_hr_gl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.14" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/email_top_hr_gl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.17" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/email_bottom_hr_gl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.20" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/password_top_hr_gl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.23" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/password_bottom_hr_gl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.26" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/confirm_pwd_top_hr_gl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.29" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/confirm_pwd_bottom_hr_gl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.32" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/address_top_hr_gl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.35" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/address_bottom_hr_gl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.38" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/street1_top_hr_gl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.41" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/street1_bottom_he_gl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.44" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/street2_top_hr_gl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.47" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/street2_bottom_hr_gl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/city_top_hr_gl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.53" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/city_bottom_hr_gl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.56" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/city_right_vertical_gl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.4" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/state_left_vertical_gl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.6" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/zipcode_top_hr_gl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.59" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/zipcode_bottom_hr_gl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.62" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/mobile_number_top_hr_gl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.65" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/mobile_number_bottom_hr_gl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.68" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/terms_conditions_top_hr_gl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.71" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/terms_conditions_bottom_hr_gl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.74" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/register_top_hr_gl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.77" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/register_bottom_hr_gl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.8" />
+
+        <ImageButton
+            android:id="@+id/backimageButtonId"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:backgroundTint="@color/back_button"
+            android:contentDescription="@string/back_button"
+            app:layout_constraintBottom_toTopOf="@+id/create_account_top_hr_gl"
+            app:layout_constraintEnd_toStartOf="@+id/leftVerticalGuideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/baseline_arrow_back_24" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/eye_icon_left_vertical_gl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.65" />
+
+        <TextView
+            android:id="@+id/server_error_id"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/server_error_bottom_hr_gl"
+            app:layout_constraintEnd_toStartOf="@+id/rightVerticalGuidelineId"
+            app:layout_constraintStart_toStartOf="@+id/leftVerticalGuideline"
+            app:layout_constraintTop_toTopOf="@+id/server_error_hr_top_gl" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/server_error_hr_top_gl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.82" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/server_error_bottom_hr_gl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.85" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
